@@ -1,0 +1,24 @@
+      <div>
+        <form>
+          <p>Search Your Favourite TV Show</p>
+          
+          <div class="input-group">
+            <input type="text" class="form-control input-md" ng-model="name"/>
+            <span class="input-group-btn">
+            	<button 
+            		type="submit"
+            		class="btn btn-md btn-warning pull-right"
+                ng-click="search() ">
+            		search
+            	</button>
+            </span>
+          </div>
+
+        <p ng-show="characters.length === 0">
+          <i>* no results found </i>
+        </p>
+
+        </form>
+
+        
+      <div character-preview character="characters"></div></div>  

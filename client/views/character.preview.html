@@ -1,0 +1,29 @@
+
+<div ng-if="character" ng-repeat = "s in character">
+
+        <div class="row">
+            <div class="col-xs-12">
+                        </div>
+                    </div>
+                    <div class="panel-body">    
+                        <div class="row">
+                            <div class="col-md-3">
+                            	<span ng-if = "s.show.image.medium != null">
+                                <img src = "{{s.show.image.medium}}"></span>
+                                <span ng-if = "s.show.image.medium == null">
+                                <div id = "Balloon_2"></div></span>
+                            </div>
+                            <div class="col-md-8">
+                                <h1><b>{{s.show.name}}</b></h1>
+                                <span style="color:white;" ng-repeat = "c in s.show.genres">{{c}} | </span>
+                            	<span ng-if = "s.show.summary != null">
+                        		<p ng-bind-html= "s.show.summary | trustHTML">{{s.show.summary}}</p></span>
+                        		<span ng-if = "s.show.summary == null">
+                        		<p style="color:red;">Pardon us, but no summary matching your query were found.You can make a request to add the show you're looking for.</p></span>
+                              <a href="/character/{{s.show.id}}" class="btn btn-warning">Details </a>
+                            </div>
+                        </div>
+                    </div>
+              
+</div>     
+      </div>

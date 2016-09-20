@@ -1,0 +1,37 @@
+<div class="row">
+            <div class="col-xs-12">
+                        </div>
+                    </div>
+                    <div class="panel-body">    
+                        <div class="row">
+                            <div class="col-md-3">
+                            	<p>{{character.name}}</p>
+                            	<span style="color:white;" ng-repeat = "c in character.genres">| {{c}} |</span><br>
+                            	<span ng-if = "character.image.medium != null">
+                                <img src = "{{character.image.medium}}"></span>
+                                <span ng-if = "character.image.medium == null">
+                                <div id = "Balloon_2"></div></span>
+                            </div>
+                            <div class="col-md-8">
+                                <h1><b>Summary</b></h1><hr>
+                                <span ng-if = "character.summary != null">
+                        		<p ng-bind-html= "character.summary | trustHTML">{{character.summary}}</p></span>
+                        		<span ng-if = "character.summary == ''">
+                        		<p style="color:red;">Pardon us, but no summary matching your query were found.You can make a request to add the show you're looking for.</p></span><hr>
+                                <h1>Cast</h1>
+                                <hr>
+                                 <p ng-show="character._embedded.cast.length === 0">
+                                    <i>* no results found </i>
+                                </p>
+                                <div ng-repeat = "c in character._embedded.cast"> 
+								<span ng-if="c.person.image.medium == null">    
+                                <img style = "width:100px;height:150px;float:left;" id ="Balloon_1"><h1 style="height:100px;">&nbsp;&nbsp;{{c.character.name}}...{{c.person.name}}</h1></span><br>
+                                <span ng-if="c.person.image.medium != null">    
+                                <img style = "width:100px;float:left;" src="{{c.person.image.medium}}"><h1 style="height:100px;">&nbsp;&nbsp;{{c.character.name}}...{{c.person.name}}</h1></span><br>
+								</div><br>
+                            </div>
+                        </div>
+                    </div>
+              
+</div>     
+      </div>

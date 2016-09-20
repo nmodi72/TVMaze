@@ -1,0 +1,89 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<base href="/">
+
+		<title>TVMaze App</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
+
+		<script src="js/app.js"></script>
+		<script src="js/search/search.controller.js"></script>
+		<script src="js/search/search.service.js"></script>
+		<script src="js/character/character.controller.js"></script>
+		<script src="js/character/character.service.js"></script>
+		<style>
+	body{
+		background-color:black; 
+	}
+
+	#navbar{
+		color : white;
+		height: 50px;
+		background-color: #660000 ;
+		
+
+	}
+
+	a , p ,h1{
+
+	font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+	font-size: 30px;
+	font-style: normal;
+	font-variant: small-caps;
+	line-height: 33px;	
+	color: #f2f2f2;
+	}
+
+	h1{
+		font-height : 44px;
+	}
+
+	#PforSummary{
+	font-family: Candara, Calibri, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+	font-size: 30px;
+	font-style: normal;
+	font-variant: small-caps;
+	line-height: 33px;	
+	color: black;
+
+	}
+
+	#Balloon_2{
+	background:url(images/NoImageYet.png);
+    width:220px;
+    height:270px;
+    display:block;
+	
+	}
+
+	#Balloon_1{
+	background:url(images/noimage.gif);
+    width:220px;
+    height:270px;
+    display:block;
+	
+	}
+		</style>
+
+	</head>
+	<body ng-app="app">
+ 	<div id = "navbar">
+ 	<b><p style = "float:left;margin-top:5px;">&nbsp TVMaze App </p></b>
+ 	<center>
+ 	<a href="#">Schedule for shows |</a>
+ 	<a href="#">Schedules |</a>
+ 	<a href="#">Favourites</a></center></p></div><br><br>
+ 	<div class="container">
+
+ 	<div ng-view></div>	
+	</div>
+
+	</body>
+</html>
